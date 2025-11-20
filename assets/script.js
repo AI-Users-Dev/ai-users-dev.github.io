@@ -5,11 +5,16 @@ const links = document.querySelectorAll('.nav-links a');
 if (toggle) {
   toggle.addEventListener('click', () => {
     nav.classList.toggle('open');
+    const expanded = nav.classList.contains('open');
+    toggle.setAttribute('aria-expanded', expanded.toString());
   });
 }
 
 links.forEach((link) => {
-  link.addEventListener('click', () => nav.classList.remove('open'));
+  link.addEventListener('click', () => {
+    nav.classList.remove('open');
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  });
 });
 
 const revealables = document.querySelectorAll('.product, .pillar, .quote');

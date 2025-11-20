@@ -2,6 +2,8 @@
 
 A sleek, neon-inspired storefront for **Minnal Nexus** showcasing modern collections, capsule drops, and membership perks.
 
+Live preview: https://ai-users-dev.github.io/
+
 ## Preview locally
 
 ```bash

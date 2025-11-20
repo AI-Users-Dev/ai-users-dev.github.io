@@ -253,6 +253,16 @@ button:hover,
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.hero-art {
+  position: absolute;
+  inset: 8% auto 6% 6%;
+  width: min(440px, 55vw);
+  max-width: 100%;
+  filter: drop-shadow(0 25px 40px rgba(0, 0, 0, 0.5));
+  opacity: 0.95;
+  animation: float 9s ease-in-out infinite;
+}
+
 .card-stack {
   position: absolute;
   inset: auto 10% 8% auto;
@@ -587,6 +597,19 @@ button:hover,
   100% { transform: translateY(0px); }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .orb,
+  .hero-art,
+  .product,
+  .pillar,
+  .quote,
+  .hero-visual .card-stack,
+  .hero-visual .card-stack * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 @media (max-width: 900px) {
   .nav {
     position: sticky;
@@ -612,6 +635,19 @@ button:hover,
 
   .nav-toggle {
     display: flex;
+  }
+
+  .hero-visual {
+    margin-top: 12px;
+  }
+
+  .hero-art {
+    inset: 2% 2% 4% auto;
+    width: min(360px, 70vw);
+  }
+
+  .card-stack {
+    inset: auto 4% 4% auto;
   }
 }
 
